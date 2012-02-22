@@ -9,10 +9,10 @@ Instalasi
 1. Instalasi Yii cukup dengan menyalin folder `yii/framework` ke `ticketline/protected/framework`
 2. Untuk BDD, instal Behat dan Mink
 
-    $ pear channel-discover pear.symfony.com
-    $ pear channel-discover pear.behat.org
-    $ pear install behat/behat
-    $ pear install behat/mink
+        $ pear channel-discover pear.symfony.com
+        $ pear channel-discover pear.behat.org
+        $ pear install behat/behat
+        $ pear install behat/mink
 
 3. Buat database MySQL sesuai  dengan yang di `config/dev.php`
 4. Buka command prompt, `cd` ke `ticketline/protected`
