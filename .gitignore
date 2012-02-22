@@ -1,0 +1,12 @@
+assets/*
+
+protected/config/prod.php
+protected/data/*.db
+protected/runtime/*
+protected/tests/report/*
+
+framework/
+
+nbproject/
+.project
+.settings
