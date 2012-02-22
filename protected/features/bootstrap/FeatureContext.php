@@ -11,7 +11,7 @@ require_once 'mink/autoload.php';
 require_once __DIR__.'/../../framework/yiit.php';
 
 Yii::$enableIncludePath = false;
-Yii::createWebApplication(__DIR__.'/../../config/test.php');
+Yii::createWebApplication(__DIR__.'/../../config/dev.php');
 Yii::import('ext.behatyii.Context.MinkYiiContext');
 
 //
@@ -25,6 +25,8 @@ Yii::import('ext.behatyii.Context.MinkYiiContext');
  * Features context.
  */
 class FeatureContext extends MinkYiiContext {
+  protected $fixtures = array('project' => 'Project');
+
   /**
     * Initializes context.
     * Every scenario gets it's own context object.
