@@ -2,10 +2,9 @@ assets/*
 
 protected/config/prod.php
 protected/data/*.db
+protected/framework/
 protected/runtime/*
 protected/tests/report/*
-
-framework/
 
 nbproject/
 .project

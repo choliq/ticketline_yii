@@ -7,6 +7,13 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
+require_once 'mink/autoload.php';
+require_once __DIR__.'/../../framework/yiit.php';
+
+Yii::$enableIncludePath = false;
+Yii::createWebApplication(__DIR__.'/../../config/test.php');
+Yii::import('ext.behatyii.Context.MinkYiiContext');
+
 //
 // Require 3rd-party libraries here:
 //
@@ -17,28 +24,15 @@ use Behat\Gherkin\Node\PyStringNode,
 /**
  * Features context.
  */
-class FeatureContext extends BehatContext
-{
-    /**
-     * Initializes context.
-     * Every scenario gets it's own context object.
-     *
-     * @param   array   $parameters     context parameters (set them up through behat.yml)
-     */
-    public function __construct(array $parameters)
-    {
-        // Initialize your context here
-    }
+class FeatureContext extends MinkYiiContext {
+  /**
+    * Initializes context.
+    * Every scenario gets it's own context object.
+    *
+    * @param   array   $parameters     context parameters (set them up through behat.yml)
+    */
+  public function __construct(array $parameters) {
+    parent::__construct();
+  }
 
-//
-// Place your definition and hook methods here:
-//
-//    /**
-//     * @Given /^I have done something with "([^"]*)"$/
-//     */
-//    public function iHaveDoneSomethingWith($argument)
-//    {
-//        doSomethingWith($argument);
-//    }
-//
 }
