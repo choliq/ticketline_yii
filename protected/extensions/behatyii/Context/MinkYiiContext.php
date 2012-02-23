@@ -98,6 +98,11 @@ class MinkYiiContext extends MinkContext {
    */
   public function iShouldBeOnThePageForWithInIts($model, $text, $attribute) {
     $obj = $model::model()->findByAttributes(array($attribute => $text));
+
+    if ($obj === null) {
+      throw new CDbException(ucfirst($model).' with "'.$attribute.'" equals to "'.$text.'" not found');
+    }
+
     $expected = '/'.$model.'/'.$obj->id;
     $this->assertPageAddress($expected);
   }

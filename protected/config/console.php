@@ -9,7 +9,7 @@ return array(
 	'components'=>array(
 
     'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=ticketline_dev',
+			'connectionString' => 'mysql:host=localhost;dbname=ticketline_test',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

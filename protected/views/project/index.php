@@ -1,3 +1,7 @@
+<div class="page-header">
+  <h1>Dashboard</h1>
+</div>
+
 <div class="row">
   <div class="span9">
     &nbsp;

@@ -11,7 +11,7 @@ require_once 'mink/autoload.php';
 require_once __DIR__.'/../../framework/yiit.php';
 
 Yii::$enableIncludePath = false;
-Yii::createWebApplication(__DIR__.'/../../config/dev.php');
+Yii::createWebApplication(__DIR__.'/../../config/test.php');
 Yii::import('ext.behatyii.Context.MinkYiiContext');
 
 //

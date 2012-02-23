@@ -1,10 +1,15 @@
 assets/*
+!.gitignore
 
 protected/config/prod.php
 protected/data/*.db
 protected/framework/
+
 protected/runtime/*
+!.gitignore
+
 protected/tests/report/*
+!.gitignore
 
 nbproject/
 .project
