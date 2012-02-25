@@ -5,6 +5,9 @@ protected/config/prod.php
 protected/data/*.db
 protected/framework/
 
+protected/extensions/
+!.gitignore
+
 protected/runtime/*
 !.gitignore
 
