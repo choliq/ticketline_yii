@@ -11,12 +11,16 @@ Feature: Editing Projects
     When I follow "Yii Framework 2"
     And I follow "Edit Project"
 
+  Scenario: cancel editing project
+    And I follow "Cancel"
+    Then I should be on the page for "project" with "Yii Framework 2" as its "name"
+
   Scenario: Updating a project
     And I fill in "Project name" with "Yii Framework 2 beta"
     And I fill in "Description" with "Yii Framework 2 beta is the next major version of Yii"
     And I press "Update Project"
     Then I should see "Project has been updated."
-    And I should be on "/project/1"
+    And I should be on the page for "project" with "Yii Framework 2 beta" as its "name"
     And I should see "Yii Framework 2 beta"
     And I should see "Yii Framework 2 beta is the next major version of Yii"
 

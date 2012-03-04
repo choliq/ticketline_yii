@@ -7,6 +7,10 @@ Feature: creating projects
     Given I am on the homepage
     When I follow "Create a new Project"
 
+  Scenario: canceling project creation
+    And I follow "Cancel"
+    Then I should be on the homepage
+
   Scenario: creating a valid project
     And I fill in "Project name" with "Yii Framework 2"
     And I fill in "Description" with "Yii Framework 2 is the next major version of Yii"

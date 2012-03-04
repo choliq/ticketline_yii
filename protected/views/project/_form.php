@@ -21,7 +21,9 @@
 
     <div class="form-actions">
       <button type="submit" class="btn btn-primary"><?php echo ($project->isNewRecord ? 'Create Project' : 'Update Project'); ?></button>
-      <button type="reset" class="btn">Cancel</button>
+      <?php echo CHtml::link('Cancel',
+        $project->isNewRecord ? array('project/index') : array('project/view', 'id' => $project->id),
+        array('class' => 'btn')); ?>
     </div>
   </fieldset>
 
